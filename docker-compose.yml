@@ -1,0 +1,18 @@
+version: '3.1'
+
+services:
+
+ adminer:
+    image: adminer
+    restart: always
+    environment:
+      ADMINER_PLUGINS: frames
+    ports:
+      - 8080:8080
+    logging:
+      driver: awslogs
+      options:
+        awslogs-region: eu-west-1
+        awslogs-group: db
+        awslogs-stream: adminer
+        awslogs-create-group: "false"
