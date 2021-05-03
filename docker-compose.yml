@@ -6,7 +6,7 @@ services:
     image: adminer
     restart: always
     environment:
-      ADMINER_PLUGINS: frames login-otp
+      ADMINER_PLUGINS: frames
     ports:
       - 8080:8080
 
