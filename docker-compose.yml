@@ -7,6 +7,9 @@ services:
     restart: always
     environment:
       ADMINER_PLUGINS: frames
+      ADMINER_OTP_SECRET: ${ADMINER_OTP_SECRET}}
+    volumes:
+      - ./plugins/login-otp.php:/var/www/html/plugins-enabled/login-otp.php:ro
     ports:
-      - 8080:8080
+      - 80:8080
 
